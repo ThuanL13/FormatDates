@@ -1,5 +1,4 @@
 package com.pluralsight;
-import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.time.ZoneId;
 import java.time.LocalDateTime;
@@ -25,6 +24,13 @@ public class FormatDates {
         System.out.println(gmtTime.format(format2));
         System.out.println(gmtTime.format(format3));
         System.out.println(gmtTime.format(format4));
+
+        // Challenge Local time
+        // Gets current date and time in local zone
+        LocalDateTime localTime = LocalDateTime.now();
+        //Creating formatter
+        DateTimeFormatter format5 = DateTimeFormatter.ofPattern("H:mm 'on' dd-MM-yyyy");
+        System.out.println(localTime.format(format5));
 
 
 
